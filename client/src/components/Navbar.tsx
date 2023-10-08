@@ -11,20 +11,24 @@ const Navbar: React.FC = () => {
   const [active, setActive] = useState<string | null>("");
   return (
     <nav className="flex flex-col p-8 h-full min-h-screen min-w-[280px] shadow-2xl bg-[hsl(var(--primary-foreground))]">
-      <span className="text-2xl font-medium mb-12">OmicsML</span>
+      <Link className="text-2xl font-medium mb-12" href={"/"}>
+        OmicsML
+      </Link>
 
       {NAV_ITEMS.map((item, idx) => (
         <div key={item.label} className="">
           {idx !== 0 && <Separator className="my-3" />}
-          <div className="flex flex-col gap-2">
+          <div
+            className="flex flex-col gap-2"
+            onClick={() => {
+              setActive(item.label);
+            }}
+          >
             <Link
               href={item.path}
               className={`text-lg font-medium px-4 py-1 rounded-md w-full flex flex-row justify-between items-center ${
                 active === item.label ? "bg-[hsl(var(--accent))]" : ""
               }`}
-              onClick={() => {
-                setActive(item.label);
-              }}
             >
               <span>{item.label}</span>
               {item.children && (
