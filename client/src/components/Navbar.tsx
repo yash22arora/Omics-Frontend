@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
         <div key={item.label} className="">
           {idx !== 0 && <Separator className="my-3" />}
           <div
-            className="flex flex-col gap-2"
+            className="flex flex-col"
             onClick={() => {
               setActive(item.label);
             }}
@@ -50,8 +50,8 @@ const Navbar: React.FC = () => {
             </Link>
             {item.children && (
               <div
-                className={`flex flex-col gap-2 ml-5 transition-[max-height] duration-200 overflow-hidden ${
-                  active === item.label ? "max-h-[100px] my-1" : "max-h-0"
+                className={`flex flex-col gap-2 ml-5 transition-[max-height] duration-300 overflow-hidden ${
+                  active === item.label ? "max-h-[200px] my-1 pt-1" : "max-h-0"
                 }`}
               >
                 {item.children.map((child) => (

@@ -10,6 +10,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { useEffect, useState } from "react";
 
 const DiseasePrediction = () => {
@@ -44,6 +46,22 @@ const DiseasePrediction = () => {
           <Button disabled={technique === undefined || file === null}>
             Get results
           </Button>
+        </div>
+        <div className="mb-4 mt-16 w-full">
+          <Tabs defaultValue="result" className="w-full flex flex-col">
+            <TabsList className="w-3/4 mx-auto h-max mb-6 bg-[hsl(var(--secondary))]">
+              <TabsTrigger value="result" className="w-1/2">
+                Result
+              </TabsTrigger>
+              <TabsTrigger value="plot" className="w-1/2">
+                Plot
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="result">
+              The result will be displayed here
+            </TabsContent>
+            <TabsContent value="plot">Plot is displayed here</TabsContent>
+          </Tabs>
         </div>
       </main>
     </div>
