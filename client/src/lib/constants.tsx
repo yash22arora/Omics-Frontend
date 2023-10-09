@@ -5,7 +5,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     label: "Preprocessing",
     path: "/preprocessing",
-    icon: <Filter />,
+    icon: <Filter size={16} />,
     children: [
       {
         label: "NA remove",
@@ -20,7 +20,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     label: "Feature Selection",
     path: "/feature-selection",
-    icon: <TextSelect />,
+    icon: <TextSelect size={16} />,
     children: [
       {
         label: "Boruta",
@@ -39,7 +39,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     label: "Disease Prediction",
     path: "/disease-prediction",
-    icon: <HeartPulse />,
+    icon: <HeartPulse size={16} />,
     children: [
       {
         label: "Deep Neural Network",
@@ -58,6 +58,6 @@ export const NAV_ITEMS: INavItem[] = [
   {
     label: "Survival Analysis",
     path: "/survival-analysis",
-    icon: <BarChart3 />,
+    icon: <BarChart3 size={16} />,
   },
 ];

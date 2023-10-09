@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     }
   }, [pathname]);
   return (
-    <nav className="flex flex-col p-8 h-full min-h-screen min-w-[280px] shadow-2xl bg-[hsl(var(--primary-foreground))]">
+    <nav className="flex flex-col p-8 h-full min-h-screen min-w-[300px] shadow-2xl bg-[hsl(var(--primary-foreground))]">
       <Link className="text-2xl font-medium mb-12" href={"/"}>
         OmicsML
       </Link>
@@ -34,14 +34,15 @@ const Navbar: React.FC = () => {
           >
             <Link
               href={item.path}
-              className={`text-lg font-medium px-4 py-1 rounded-md w-full flex flex-row justify-between items-center ${
+              className={`text-lg font-medium px-4 py-1 rounded-md w-full flex flex-row items-center ${
                 active === item.label ? "bg-[hsl(var(--secondary))]" : ""
               }`}
             >
-              <span>{item.label}</span>
+              {item.icon}
+              <span className="ml-2">{item.label}</span>
               {item.children && (
                 <ChevronDown
-                  className={`inline-block ml-2 transition-all duration-200 delay-75 ${
+                  className={`inline-block ml-auto transition-all duration-200 delay-75 ${
                     active === item.label ? "rotate-180" : ""
                   }`}
                   size={20}
@@ -50,7 +51,7 @@ const Navbar: React.FC = () => {
             </Link>
             {item.children && (
               <div
-                className={`flex flex-col gap-2 ml-5 transition-[max-height] duration-300 overflow-hidden ${
+                className={`flex flex-col gap-2 ml-10 transition-[max-height] duration-300 overflow-hidden ${
                   active === item.label ? "max-h-[200px] my-1 pt-1" : "max-h-0"
                 }`}
               >

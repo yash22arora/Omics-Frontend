@@ -1,5 +1,6 @@
 "use client";
 
+import ResultContainer from "@/components/ResultContainer";
 import UploadBox from "@/components/UploadBox";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -30,7 +31,7 @@ const SurvivalAnalysis = () => {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="result">
-              The result will be displayed here
+              <ResultContainer></ResultContainer>
             </TabsContent>
             <TabsContent value="plot">Curve is displayed here</TabsContent>
           </Tabs>

@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { useEffect, useState } from "react";
+import ResultContainer from "@/components/ResultContainer";
 
 const DiseasePrediction = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -58,7 +59,7 @@ const DiseasePrediction = () => {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="result">
-              The result will be displayed here
+              <ResultContainer></ResultContainer>
             </TabsContent>
             <TabsContent value="plot">Plot is displayed here</TabsContent>
           </Tabs>

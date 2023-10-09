@@ -1,5 +1,6 @@
 "use client";
 
+import ResultContainer from "@/components/ResultContainer";
 import UploadBox from "@/components/UploadBox";
 import { Button } from "@/components/ui/button";
 import {
@@ -42,6 +43,13 @@ const PreProcessing = () => {
             Get preprocessed data
           </Button>
         </div>
+        <div className="mt-4 mb-3 flex flex-col gap-3">
+          <h3 className="text-lg font-medium">Result</h3>
+          <ResultContainer></ResultContainer>
+        </div>
+        <Button className=" ml-auto min-h-max max-h-full">
+          Download preprocessed data
+        </Button>
       </main>
     </div>
   );

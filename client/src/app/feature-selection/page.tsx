@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import ResultContainer from "@/components/ResultContainer";
 
 const FeatureSelection = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -46,6 +47,13 @@ const FeatureSelection = () => {
             Get selected features
           </Button>
         </div>
+        <div className="mt-4 mb-3 flex flex-col gap-3">
+          <h3 className="text-lg font-medium">Result</h3>
+          <ResultContainer></ResultContainer>
+        </div>
+        <Button className=" ml-auto min-h-max max-h-full">
+          Download selected features
+        </Button>
       </main>
     </div>
   );
