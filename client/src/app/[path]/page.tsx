@@ -1,4 +1,4 @@
-import Error404 from "./[path]/page";
+import Error404 from "./[subpath]/page";
 
 const Error = () => {
   return <Error404 />;

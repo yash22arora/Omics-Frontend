@@ -1,9 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/store/theme-provider";
-import { useState } from "react";
 
 export const metadata: Metadata = {
   title: "OmicsML",

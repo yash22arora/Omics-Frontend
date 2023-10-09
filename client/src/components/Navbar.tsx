@@ -47,13 +47,13 @@ const Navbar: React.FC = () => {
                 }`}
               >
                 {item.children.map((child) => (
-                  <Link
-                    href={child.path}
+                  <span
+                    // href={child.path}
                     key={child.label}
                     className="text-sm my-1"
                   >
                     {child.label}
-                  </Link>
+                  </span>
                 ))}
               </div>
             )}
