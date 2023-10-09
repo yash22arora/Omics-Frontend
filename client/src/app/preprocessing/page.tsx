@@ -1,4 +1,5 @@
 "use client";
+
 import UploadBox from "@/components/UploadBox";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,7 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
-export default function PreProcessing() {
+const PreProcessing = () => {
   const [file, setFile] = useState<File | null>(null);
   const [technique, setTechnique] = useState<string | undefined>(undefined);
   useEffect(() => {
@@ -37,9 +38,13 @@ export default function PreProcessing() {
               <SelectItem value="knn-impute">KNN Imputation</SelectItem>
             </SelectContent>
           </Select>
-          <Button>Get preprocessed data</Button>
+          <Button disabled={technique === undefined || file === null}>
+            Get preprocessed data
+          </Button>
         </div>
       </main>
     </div>
   );
-}
+};
+
+export default PreProcessing;

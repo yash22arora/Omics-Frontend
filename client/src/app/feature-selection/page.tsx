@@ -1,4 +1,5 @@
 "use client";
+
 import UploadBox from "@/components/UploadBox";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -11,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-export default function FeatureSelection() {
+const FeatureSelection = () => {
   const [file, setFile] = useState<File | null>(null);
   const [technique, setTechnique] = useState<string | undefined>(undefined);
   useEffect(() => {
@@ -48,4 +49,6 @@ export default function FeatureSelection() {
       </main>
     </div>
   );
-}
+};
+
+export default FeatureSelection;

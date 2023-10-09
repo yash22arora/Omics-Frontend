@@ -1,9 +1,10 @@
 "use client";
+
 import UploadBox from "@/components/UploadBox";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
-export default function SurvivalAnalysis() {
+const SurvivalAnalysis = () => {
   const [file, setFile] = useState<File | null>(null);
   useEffect(() => {
     if (file) {
@@ -19,4 +20,6 @@ export default function SurvivalAnalysis() {
       </main>
     </div>
   );
-}
+};
+
+export default SurvivalAnalysis;

@@ -1,4 +1,5 @@
 "use client";
+
 import UploadBox from "@/components/UploadBox";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -11,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-export default function DiseasePrediction() {
+const DiseasePrediction = () => {
   const [file, setFile] = useState<File | null>(null);
   const [technique, setTechnique] = useState<string | undefined>(undefined);
   useEffect(() => {
@@ -40,9 +41,13 @@ export default function DiseasePrediction() {
               <SelectItem value="stacked-ensemble">Stacked Ensemble</SelectItem>
             </SelectContent>
           </Select>
-          <Button>Get results</Button>
+          <Button disabled={technique === undefined || file === null}>
+            Get results
+          </Button>
         </div>
       </main>
     </div>
   );
-}
+};
+
+export default DiseasePrediction;
