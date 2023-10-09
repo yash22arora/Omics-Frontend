@@ -3,11 +3,7 @@ import UploadBox from "@/components/UploadBox";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
-export default function SurvivalLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SurvivalAnalysis() {
   const [file, setFile] = useState<File | null>(null);
   useEffect(() => {
     if (file) {

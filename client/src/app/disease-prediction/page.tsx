@@ -11,11 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-export default function DiseaseLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DiseasePrediction() {
   const [file, setFile] = useState<File | null>(null);
   const [technique, setTechnique] = useState<string | undefined>(undefined);
   useEffect(() => {

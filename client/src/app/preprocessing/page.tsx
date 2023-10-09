@@ -11,11 +11,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
-export default function PreProcessingLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function PreProcessing() {
   const [file, setFile] = useState<File | null>(null);
   const [technique, setTechnique] = useState<string | undefined>(undefined);
   useEffect(() => {
