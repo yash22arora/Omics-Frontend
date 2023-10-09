@@ -3,12 +3,20 @@
 import { NAV_ITEMS } from "@/lib/constants";
 import { ThemeToggle } from "./ThemeToggle";
 import { Separator } from "./ui/separator";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [active, setActive] = useState<string | null>("");
+  const pathname = usePathname();
+  useEffect(() => {
+    const item = NAV_ITEMS.find((item) => item.path === pathname);
+    if (item) {
+      setActive(item.label);
+    }
+  }, [pathname]);
   return (
     <nav className="flex flex-col p-8 h-full min-h-screen min-w-[280px] shadow-2xl bg-[hsl(var(--primary-foreground))]">
       <Link className="text-2xl font-medium mb-12" href={"/"}>
@@ -27,7 +35,7 @@ const Navbar: React.FC = () => {
             <Link
               href={item.path}
               className={`text-lg font-medium px-4 py-1 rounded-md w-full flex flex-row justify-between items-center ${
-                active === item.label ? "bg-[hsl(var(--accent))]" : ""
+                active === item.label ? "bg-[hsl(var(--secondary))]" : ""
               }`}
             >
               <span>{item.label}</span>

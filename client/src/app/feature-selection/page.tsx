@@ -19,9 +19,7 @@ export default function FeatureSelectionLayout({
   const [file, setFile] = useState<File | null>(null);
   const [technique, setTechnique] = useState<string | undefined>(undefined);
   useEffect(() => {
-    if (file) {
-      console.log(file);
-    }
+    console.log(file);
   }, [file]);
   return (
     <div>
@@ -44,7 +42,12 @@ export default function FeatureSelectionLayout({
               <SelectItem value="xgboost">Xg Boost</SelectItem>
             </SelectContent>
           </Select>
-          <Button>Get feature selection</Button>
+          <Button
+            disabled={technique === undefined || file === null}
+            className="disabled:cursor-not-allowed"
+          >
+            Get selected features
+          </Button>
         </div>
       </main>
     </div>

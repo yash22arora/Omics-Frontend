@@ -19,9 +19,7 @@ export default function PreProcessingLayout({
   const [file, setFile] = useState<File | null>(null);
   const [technique, setTechnique] = useState<string | undefined>(undefined);
   useEffect(() => {
-    if (file) {
-      console.log(file);
-    }
+    console.log(file);
   }, [file]);
   return (
     <div>
