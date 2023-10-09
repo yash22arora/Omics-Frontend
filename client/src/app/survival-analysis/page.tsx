@@ -3,7 +3,7 @@ import UploadBox from "@/components/UploadBox";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 
-export default function PreProcessingLayout({
+export default function SurvivalLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ export default function PreProcessingLayout({
   return (
     <div>
       <main className="flex flex-col gap-4">
-        <h1 className="text-3xl font-medium">Preprocessing</h1>
+        <h1 className="text-3xl font-medium">Survival Ananlyis</h1>
         <Separator />
         <UploadBox onUpload={setFile} />
       </main>
