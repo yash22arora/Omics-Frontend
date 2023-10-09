@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import { useDropzone } from "react-dropzone";
+import { useDropzone } from "react-dropzone-esm";
 
 const UploadBox: React.FC<{
   onUpload: (file: File | null) => void;
