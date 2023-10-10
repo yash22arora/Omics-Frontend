@@ -31,7 +31,7 @@ export default function OmicsHome() {
               <Link
                 key={item.label}
                 href={item.path}
-                className="flex flex-row items-center gap-2 p-5 pl-6 bg-slate-900 rounded-sm bg-opacity-70 transition-all duration-300 hover:shadow-xl hover:scale-110"
+                className="flex flex-row items-center gap-2 p-5 pl-6 bg-slate-900 rounded-sm bg-opacity-70 transition-all duration-300 hover:shadow-2xl hover:scale-110"
               >
                 <span className="scale-[2] mr-2">{item.icon}</span>
                 <span className="text-xl">{item.label}</span>

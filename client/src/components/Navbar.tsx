@@ -5,11 +5,12 @@ import { ThemeToggle } from "./ThemeToggle";
 import { Separator } from "./ui/separator";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Home } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 const Navbar: React.FC = () => {
-  const [active, setActive] = useState<string | null>("");
+  const [active, setActive] = useState<string | null>("Home");
   const pathname = usePathname();
   useEffect(() => {
     const item = NAV_ITEMS.find((item) => item.path === pathname);
@@ -24,6 +25,19 @@ const Navbar: React.FC = () => {
         <span className="text-amber-300">ML</span>
       </Link>
 
+      <Link
+        href={"/omics"}
+        className={`text-lg font-medium px-4 py-1 mb-8 rounded-md w-full flex flex-row items-center ${
+          active === "Home" ? "bg-[hsl(var(--secondary))]" : ""
+        }`}
+        onClick={() => {
+          setActive("Home");
+        }}
+      >
+        <Home size={16} />
+        <span className="ml-2">Home</span>
+      </Link>
+      <span className="px-1 py-1 mb-4 opacity-75 font-semibold ">Tools</span>
       {NAV_ITEMS.map((item, idx) => (
         <div key={item.label} className="">
           {idx !== 0 && <Separator className="my-3" />}
@@ -71,8 +85,18 @@ const Navbar: React.FC = () => {
         </div>
       ))}
 
-      <div className="mt-auto">
+      <div className="mt-auto flex flex-row gap-3">
         <ThemeToggle />
+        <Button
+          variant="outline"
+          size="icon"
+          className="bg-[hsl(var(--accent))]"
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
+          <Home className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+        </Button>
       </div>
     </nav>
   );

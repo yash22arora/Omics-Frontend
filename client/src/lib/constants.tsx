@@ -1,4 +1,10 @@
-import { BarChart3, Filter, HeartPulse, MousePointerClick } from "lucide-react";
+import {
+  BarChart3,
+  Filter,
+  HeartPulse,
+  Home,
+  MousePointerClick,
+} from "lucide-react";
 import { INavItem } from "./types";
 
 export const NAV_ITEMS: INavItem[] = [
