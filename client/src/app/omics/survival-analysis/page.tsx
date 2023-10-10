@@ -17,7 +17,7 @@ const SurvivalAnalysis = () => {
   return (
     <div>
       <main className="flex flex-col gap-4">
-        <h1 className="text-3xl font-medium">Survival Ananlyis</h1>
+        <h1 className="text-3xl font-medium">Survival Analyis</h1>
         <Separator />
         <UploadBox onUpload={setFile} />
         <div className="my-4 w-full">

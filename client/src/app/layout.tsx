@@ -22,10 +22,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <main className="flex min-h-screen w-full flex-col p-16 overflow-y-scroll ">
-            {children}
-          </main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

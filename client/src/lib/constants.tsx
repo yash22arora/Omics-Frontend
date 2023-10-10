@@ -4,60 +4,60 @@ import { INavItem } from "./types";
 export const NAV_ITEMS: INavItem[] = [
   {
     label: "Preprocessing",
-    path: "/preprocessing",
+    path: "/omics/preprocessing",
     icon: <Filter size={16} />,
     children: [
       {
         label: "NA remove",
-        path: "/preprocessing/na-remove",
+        path: "/omics/preprocessing/na-remove",
       },
       {
         label: "KNN imputation",
-        path: "/preprocessing/knn-imputation",
+        path: "/omics/preprocessing/knn-imputation",
       },
     ],
   },
   {
     label: "Feature Selection",
-    path: "/feature-selection",
+    path: "/omics/feature-selection",
     icon: <TextSelect size={16} />,
     children: [
       {
         label: "Boruta",
-        path: "/feature-selection/boruta",
+        path: "/omics/feature-selection/boruta",
       },
       {
         label: "Glmnet - Lasso",
-        path: "/feature-selection/glmnet-lasso",
+        path: "/omics/feature-selection/glmnet-lasso",
       },
       {
         label: "Xg Boost",
-        path: "/feature-selection/xgboost",
+        path: "/omics/feature-selection/xgboost",
       },
     ],
   },
   {
     label: "Disease Prediction",
-    path: "/disease-prediction",
+    path: "/omics/disease-prediction",
     icon: <HeartPulse size={16} />,
     children: [
       {
         label: "Deep Neural Network",
-        path: "/disease-prediction/dnn",
+        path: "/omics/disease-prediction/dnn",
       },
       {
         label: "Random Forest",
-        path: "/disease-prediction/random-forest",
+        path: "/omics/disease-prediction/random-forest",
       },
       {
         label: "Stacked Ensemble",
-        path: "/disease-prediction/stacked-ensemble",
+        path: "/omics/disease-prediction/stacked-ensemble",
       },
     ],
   },
   {
     label: "Survival Analysis",
-    path: "/survival-analysis",
+    path: "/omics/survival-analysis",
     icon: <BarChart3 size={16} />,
   },
 ];
