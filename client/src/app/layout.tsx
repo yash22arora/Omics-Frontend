@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`flex flex-row max-h-screen overflow-hidden`}>
+      <body className={`flex flex-row`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

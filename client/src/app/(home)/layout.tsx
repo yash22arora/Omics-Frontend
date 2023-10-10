@@ -1,0 +1,12 @@
+export default function OmicsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={`flex flex-col w-full`}>
+      {children}
+      <div>Footer</div>
+    </div>
+  );
+}
