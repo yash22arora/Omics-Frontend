@@ -19,8 +19,9 @@ const Navbar: React.FC = () => {
   }, [pathname]);
   return (
     <nav className="flex flex-col p-8 h-full min-h-screen min-w-[300px] shadow-2xl bg-[hsl(var(--primary-foreground))]">
-      <Link className="text-2xl font-medium mb-12" href={"/"}>
-        OmicsML
+      <Link className="text-2xl font-semibold mb-12" href={"/"}>
+        Omics
+        <span className="text-amber-300">ML</span>
       </Link>
 
       {NAV_ITEMS.map((item, idx) => (
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
                 active === item.label ? "bg-[hsl(var(--secondary))]" : ""
               }`}
             >
-              {item.icon}
+              <span className="text-lg">{item.icon}</span>
               <span className="ml-2">{item.label}</span>
               {item.children && (
                 <ChevronDown

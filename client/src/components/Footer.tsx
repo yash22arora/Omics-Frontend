@@ -6,8 +6,11 @@ const Footer: React.FC = () => {
   return (
     <div className="p-12 flex flex-row items-start bg-card text-card-foreground mt-auto">
       <div className="flex flex-col gap-4 h-full">
-        <span className="text-2xl font-semibold">OmicsML</span>
-        <span className="font-light">
+        <span className="text-2xl font-semibold">
+          Omics
+          <span className="text-amber-300">ML</span>
+        </span>
+        <span className="font-light opacity-80">
           Machine Learning for Omics Data Analysis
         </span>
         <div className="flex flex-col gap-3 mt-auto">
@@ -16,13 +19,13 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-2 my-2">
             <span className="font-light">
               Email :{" "}
-              <a href="mailto:test@gmail.com" className="text-blue-500">
+              <a href="mailto:test@gmail.com" className="text-amber-300">
                 test@gmail.com
               </a>
             </span>
             <span className="font-light">
               Phone :{" "}
-              <a href="tel:+919876543210" className="text-blue-500">
+              <a href="tel:+919876543210" className="text-amber-300">
                 +919876543210
               </a>
             </span>

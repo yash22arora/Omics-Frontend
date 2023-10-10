@@ -1,4 +1,4 @@
-import { BarChart3, Filter, HeartPulse, TextSelect } from "lucide-react";
+import { BarChart3, Filter, HeartPulse, MousePointerClick } from "lucide-react";
 import { INavItem } from "./types";
 
 export const NAV_ITEMS: INavItem[] = [
@@ -20,7 +20,7 @@ export const NAV_ITEMS: INavItem[] = [
   {
     label: "Feature Selection",
     path: "/omics/feature-selection",
-    icon: <TextSelect size={16} />,
+    icon: <MousePointerClick size={16} />,
     children: [
       {
         label: "Boruta",
