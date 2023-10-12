@@ -4,7 +4,7 @@ import { NAV_ITEMS } from "@/lib/constants";
 
 const Footer: React.FC = () => {
   return (
-    <div className="p-12 flex flex-row items-start bg-card text-card-foreground mt-auto">
+    <div className="p-12 flex flex-row items-start bg-card text-card-foreground mt-auto relative z-20">
       <div className="flex flex-col gap-4 h-full">
         <span className="text-2xl font-semibold">
           Omics
