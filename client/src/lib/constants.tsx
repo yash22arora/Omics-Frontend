@@ -5,7 +5,8 @@ import {
   Home,
   MousePointerClick,
 } from "lucide-react";
-import { INavItem } from "./types";
+import { INavItem, ITeam } from "./types";
+import pfp from "../assets/team/pfp.jpeg";
 
 export const NAV_ITEMS: INavItem[] = [
   {
@@ -65,5 +66,35 @@ export const NAV_ITEMS: INavItem[] = [
     label: "Survival Analysis",
     path: "/omics/survival-analysis",
     icon: <BarChart3 size={16} />,
+  },
+];
+
+export const TEAM: ITeam[] = [
+  {
+    name: "Dr. Ashima Singh",
+    subtitle: "Associate Professor, TIET",
+    image: pfp,
+  },
+  {
+    name: "Ms. Arwin Kaur",
+    subtitle: "Research Scholar, TIET",
+    image: pfp,
+  },
+  {
+    name: "Ms. Arwin Kaur",
+    subtitle: "Research Scholar, TIET",
+    image: pfp,
+  },
+  {
+    name: "Yashvardhan Arora",
+    subtitle: "Undergraduate, TIET",
+    image: pfp,
+    linkedin: "https://www.linkedin.com/in/yashvardhan-arora/",
+    github: "https://github.com/yash22arora",
+  },
+  {
+    name: "Sidharth Bahl",
+    subtitle: "Undergraduate, TIET",
+    image: pfp,
   },
 ];

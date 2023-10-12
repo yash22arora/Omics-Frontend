@@ -26,12 +26,12 @@ export default function OmicsHome() {
           >
             Explore
           </a>
-          <div className="mt-24 px-32 flex flex-row justify-between w-full">
+          <div className="mt-20 mb-8 px-32 flex flex-row flex-wrap justify-between w-full">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.label}
                 href={item.path}
-                className="flex flex-row items-center gap-2 p-5 pl-6 bg-slate-900 rounded-sm bg-opacity-70 transition-all duration-300 hover:shadow-2xl hover:scale-110"
+                className="flex flex-row items-center gap-2 p-5 pl-6 mx-3 my-3 bg-slate-900 rounded-sm bg-opacity-70 transition-all duration-300 hover:shadow-2xl hover:scale-110"
               >
                 <span className="scale-[2] mr-2">{item.icon}</span>
                 <span className="text-xl">{item.label}</span>
