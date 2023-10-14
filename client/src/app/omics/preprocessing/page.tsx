@@ -3,6 +3,7 @@
 import ResultContainer from "@/components/ResultContainer";
 import UploadBox from "@/components/UploadBox";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 import {
   Select,
   SelectContent,
@@ -45,6 +46,7 @@ const PreProcessing = () => {
   const [technique, setTechnique] = useState<TTechnique | undefined>(undefined);
   const [result, setResult] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const { toast } = useToast();
   useEffect(() => {
     console.log(file);
   }, [file]);
@@ -57,12 +59,21 @@ const PreProcessing = () => {
     setLoading(false);
 
     setResult(data?.data || "");
+    if (data?.status !== 200) {
+      toast({
+        description: "Something went wrong",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleDownload = () => {
-    if (!result) return;
-
-    saveAs(result, "preprocessed_data.csv");
+    if (!result) {
+      return toast({
+        description: "No data to download",
+        variant: "destructive",
+      });
+    } else saveAs(result, "preprocessed_data.csv");
   };
 
   return (
