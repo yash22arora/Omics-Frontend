@@ -30,16 +30,16 @@ export const NAV_ITEMS: INavItem[] = [
     icon: <MousePointerClick size={16} />,
     children: [
       {
-        label: "Boruta",
-        path: "/omics/feature-selection/boruta",
+        label: "ANOVA",
+        path: "/omics/feature-selection/anova",
       },
       {
-        label: "Glmnet - Lasso",
-        path: "/omics/feature-selection/glmnet-lasso",
+        label: "Fire",
+        path: "/omics/feature-selection/fire",
       },
       {
-        label: "Xg Boost",
-        path: "/omics/feature-selection/xgboost",
+        label: "Pso",
+        path: "/omics/feature-selection/pso",
       },
     ],
   },
