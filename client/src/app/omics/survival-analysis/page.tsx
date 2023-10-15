@@ -18,13 +18,15 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 const SurvivalAnalysis = () => {
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<string>("");
-  const [plot1, setPlot1] = useState<any>();
-  const [plot2, setPlot2] = useState<any>();
+  const [plot1, setPlot1] = useState<string | null>();
+  const [plot2, setPlot2] = useState<string | null>();
   const [loading, setLoading] = useState<boolean>(false);
   const { toast } = useToast();
 
   const handleSubmit = async () => {
     setResult("");
+    setPlot1(null);
+    setPlot2(null);
     setLoading(true);
     if (!file) return;
     const formData = new FormData();
@@ -106,7 +108,7 @@ const SurvivalAnalysis = () => {
               </ResultContainer>
             </TabsContent>
             <TabsContent value="plot1">
-              {plot1 && (
+              {plot1 ? (
                 <Image
                   src={plot1}
                   alt="Brier Curve"
@@ -114,16 +116,28 @@ const SurvivalAnalysis = () => {
                   height={200}
                   className="mx-auto mt-8"
                 />
+              ) : (
+                <Loader2
+                  className="animate-spin mx-auto mt-8"
+                  size={30}
+                  color="white"
+                />
               )}
             </TabsContent>
             <TabsContent value="plot2">
-              {plot2 && (
+              {plot2 ? (
                 <Image
                   src={plot2}
                   alt="Brier Curve"
                   width={600}
                   height={200}
                   className="mx-auto mt-8"
+                />
+              ) : (
+                <Loader2
+                  className="animate-spin mx-auto mt-8"
+                  size={30}
+                  color="white"
                 />
               )}
             </TabsContent>
