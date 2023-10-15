@@ -81,7 +81,7 @@ export const TEAM: ITeam[] = [
     image: pfp,
   },
   {
-    name: "Ms. Arwin Kaur",
+    name: "Ms. Parampreet Kaur",
     subtitle: "Research Scholar, TIET",
     image: pfp,
   },
@@ -96,5 +96,7 @@ export const TEAM: ITeam[] = [
     name: "Sidharth Bahl",
     subtitle: "Undergraduate, TIET",
     image: pfp,
+    linkedin: "https://www.linkedin.com/in/sidharthbahl/",
+    github: "https://github.com/sidB67",
   },
 ];

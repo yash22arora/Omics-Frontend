@@ -10,7 +10,7 @@ const TeamMember: React.FC<ITeam> = ({
   github,
 }) => {
   return (
-    <div className="flex flex-col gap-1 w-fit my-8">
+    <div className="flex flex-col gap-1 w-fit my-8 relative z-30">
       <div className="relative w-full">
         <Image
           src={image}
