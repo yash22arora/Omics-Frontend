@@ -120,6 +120,7 @@ const PreProcessing = () => {
         <Button
           className=" ml-auto min-h-max max-h-full"
           onClick={handleDownload}
+          disabled={result === ""}
         >
           Download preprocessed data
         </Button>

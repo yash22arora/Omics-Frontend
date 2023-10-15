@@ -16,3 +16,8 @@ export const saveAs = (data: string, filename: string) => {
   link.click();
   window.URL.revokeObjectURL(link.href);
 };
+
+export const getPNGUrl = (responseBlob: string) => {
+  const blob = new Blob([responseBlob], { type: "image/png" });
+  return URL.createObjectURL(blob);
+};

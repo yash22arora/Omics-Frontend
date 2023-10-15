@@ -25,7 +25,6 @@ const UploadBox: React.FC<{
   });
 
   useEffect(() => {
-    console.log(acceptedFiles);
     if (acceptedFiles.length > 0) {
       onUpload(acceptedFiles[0]);
     } else {
