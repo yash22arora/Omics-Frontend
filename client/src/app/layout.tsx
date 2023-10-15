@@ -16,6 +16,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="og:title" content="OmicsML" />
+        <meta
+          name="og:image"
+          content="https://cdn.servatom.com/external/OmicsML/thumbnail.jpeg"
+        ></meta>
+        <meta
+          name="og:description"
+          content="Machine Learning for Omics Data Analysis Simplified"
+        ></meta>
+      </head>
       <body className={`flex flex-row`}>
         <Toaster />
         <ThemeProvider
